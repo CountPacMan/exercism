@@ -2,6 +2,9 @@ module.exports = function() {
   var list = {};
   return {
     roster: function() {
+      for (var key in list) {
+        list[key] = list[key].sort();
+      }
       return list;
     },
     add: function(name, grade) {
