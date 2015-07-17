@@ -1,11 +1,14 @@
-var School = function() {
+module.exports = function() {
   var list = {};
-  this.roster = function() {
-    return list;
-  };
-  this.add = function(name, grade) {
-    list[grade] ? list[grade].push(name) : list[grade] = [name];
+  return {
+    roster: function() {
+      return list;
+    },
+    add: function(name, grade) {
+      list[grade] ? list[grade].push(name) : list[grade] = [name];
+    },
+    grade: function(grade) {
+      return list[grade] ? list[grade].sort() : [];
+    }
   };
 };
-
-module.exports = School;
