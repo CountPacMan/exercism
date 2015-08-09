@@ -25,7 +25,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
     public function testAllOnes()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $this->rollMany(20, 1);
 
         $this->assertEquals(20, $this->game->score());
