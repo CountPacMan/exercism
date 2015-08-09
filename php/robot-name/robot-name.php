@@ -19,4 +19,8 @@ class Robot {
   function getName() {
     return $this->name;
   }
+
+  function reset() {
+    $this->__construct();
+  }
 }

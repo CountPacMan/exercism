@@ -37,7 +37,7 @@ class RobotTest extends PHPUnit_Framework_TestCase
 
     public function testresetName()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $name1 = $this->robot->getName();
 
         $this->robot->reset();
