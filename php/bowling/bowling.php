@@ -15,8 +15,28 @@ class Game {
   }
 
   function roll($pins) {
+    // test for strike
+    if ($this->throw === 1 && $pins === 10) {
+      $this->special = 'strike';
+      $this->backlog += $pins;
+      $this->frame++;
+      $this->throw = 1;
+    }
+    // continue strike score
+    elseif ($this->special === 'strike' && $this->throw === 1) {
+      $this->backlog += $pins + $pins;
+      $this->throw++;
+    }
+    // count up strike score
+    elseif ($this->special === 'strike' && $this->throw === 2) {
+      $this->score += $this->backlog + $pins + $pins;
+      $this->backlog = 0;
+      $this->special = '';
+      $this->throw = 1;
+      $this->frame++;
+    }
     // test for spare
-    if ($this->throw === 2 && $this->backlog + $pins === 10) {
+    elseif ($this->throw === 2 && $this->backlog + $pins === 10) {
       $this->special = 'spare';
       $this->backlog += $pins;
       $this->frame++;

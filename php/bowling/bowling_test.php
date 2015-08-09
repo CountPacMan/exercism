@@ -33,7 +33,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
     public function testOneSpare()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $this->rollSpare();
         $this->game->roll(3);
         $this->rollMany(17, 0);
@@ -43,7 +43,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
     public function testOneStrike()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $this->rollStrike();
         $this->game->roll(3);
         $this->game->roll(4);
