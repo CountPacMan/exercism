@@ -1,13 +1,15 @@
 <?php
 
 Class Clock {
-  private $time;
+  private $hours;
+  private $minutes;
 
-  function __construct($input) {
-    $this->time = $input;
+  function __construct($hours, $minutes = 0) {
+    $this->hours = $hours;
+    $this->minutes = $minutes;
   }
 
   function __toString() {
-    return date("H:i", mktime($this->time,0));
+    return date("H:i", mktime($this->hours, $this->minutes));
   }
 }

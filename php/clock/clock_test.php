@@ -13,7 +13,7 @@ class ClockTest extends \PHPUnit_Framework_TestCase
 
     public function testPastTheHour()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(11, 9);
 
         $this->assertEquals('11:09', $clock->__toString());
