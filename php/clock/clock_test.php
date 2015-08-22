@@ -62,43 +62,43 @@ class ClockTest extends \PHPUnit_Framework_TestCase
 
     public function testWrapAroundBackwards()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(0, 30);
 
-        $clock = $clock->sub(60);
+        $clock->sub(60);
 
         $this->assertEquals('23:30', $clock->__toString());
     }
 
     public function testWrapAroundDay()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(5, 32);
 
-        $clock = $clock->add(25 * 60);
+        $clock->add(25 * 60);
 
         $this->assertEquals('06:32', $clock->__toString());
     }
 
     public function testWrapAroundDayBackwards()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(5, 32);
 
-        $clock = $clock->sub(25 * 60);
+        $clock->sub(25 * 60);
 
         $this->assertEquals('04:32', $clock->__toString());
     }
 
     public function testEquivalentClocks()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $this->assertEquals(new Clock(15, 37), new Clock(15, 37));
     }
 
     public function testInequivalentClocks()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $this->assertNotEquals(new Clock(01, 01), new Clock(18, 32));
     }
 }
