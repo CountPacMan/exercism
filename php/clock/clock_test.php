@@ -6,6 +6,7 @@ class ClockTest extends \PHPUnit_Framework_TestCase
 {
     public function testOnTheHour()
     {
+        // $this->markTestSkipped();
         $clock = new Clock(8);
 
         $this->assertEquals('08:00', $clock->__toString());
@@ -21,10 +22,10 @@ class ClockTest extends \PHPUnit_Framework_TestCase
 
     public function testAddingAFewMinutes()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(10);
 
-        $clock = $clock->add(3);
+        $clock->add(3);
 
         $this->assertEquals('10:03', $clock->__toString());
     }
