@@ -10,8 +10,6 @@ class Game {
 
   function roll($pins) {
     $this->throws[] = $pins;
-    // echo "throws: " . $this->throws . "/n";
-    print_r($this->throws);
   }
 
   function score() {
