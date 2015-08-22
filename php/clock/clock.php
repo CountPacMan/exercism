@@ -19,4 +19,8 @@ Class Clock {
     $this->minutes += $input;
     // echo $this->hours . $this->minutes . "\n";
   }
+
+  function sub($input) {
+    $this->minutes -= $input;
+  }
 }

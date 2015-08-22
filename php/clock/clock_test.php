@@ -32,30 +32,30 @@ class ClockTest extends \PHPUnit_Framework_TestCase
 
     public function testAddingOverAnHour()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(10);
 
-        $clock = $clock->add(61);
+        $clock->add(61);
 
         $this->assertEquals('11:01', $clock->__toString());
     }
 
     public function testWrapAroundAtMidnight()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(23, 30);
 
-        $clock = $clock->add(60);
+        $clock->add(60);
 
         $this->assertEquals('00:30', $clock->__toString());
     }
 
     public function testSubtractMinutes()
     {
-        $this->markTestSkipped();
+        // $this->markTestSkipped();
         $clock = new Clock(10);
 
-        $clock = $clock->sub(90);
+        $clock->sub(90);
 
         $this->assertEquals('08:30', $clock->__toString());
     }
