@@ -18,6 +18,7 @@ class GameTest extends \PHPUnit_Framework_TestCase
 
     public function testGutterGame()
     {
+      // $this->markTestSkipped();
         $this->rollMany(20, 0);
 
         $this->assertEquals(0, $this->game->score());
