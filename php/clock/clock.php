@@ -3,11 +3,11 @@
 Class Clock {
   private $time;
 
-  public __construct($input) {
+  function __construct($input) {
     $this->time = $input;
   }
 
-  public __toString() {
-    return idate('H', $this->time);
+  function __toString() {
+    return date("H:i", mktime($this->time,0));
   }
 }
